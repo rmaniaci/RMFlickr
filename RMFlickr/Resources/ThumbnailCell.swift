@@ -15,7 +15,6 @@ class ThumbnailCell: UITableViewCell {
     
     // Configure the ThumbnailCell.
     func configure(recentPhoto: RecentPhoto) {
-        self.prepareForReuse()
         // SDWebImage is used to asynchronously download and cache the photo for purposes of efficiency.
         thumbnailView.sd_setShowActivityIndicatorView(true)
         thumbnailView.sd_setIndicatorStyle(.white)

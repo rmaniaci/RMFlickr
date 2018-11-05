@@ -26,7 +26,7 @@ class ThumbnailTableViewController: UITableViewController {
     }
     
     // Change the status bar color to white.
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
     
@@ -101,5 +101,12 @@ extension ThumbnailTableViewController : FlickrDelegate {
             case flickrAPIError
             case imageCreationError*/
         })
+    }
+}
+
+// Keep the status bar white by setting it on the Navigation Controller.
+extension UINavigationController {
+    override open var preferredStatusBarStyle : UIStatusBarStyle {
+        return topViewController?.preferredStatusBarStyle ?? .default
     }
 }

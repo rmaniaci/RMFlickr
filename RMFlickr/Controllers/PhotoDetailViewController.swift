@@ -27,12 +27,15 @@ class PhotoDetailViewController: UIViewController {
                 self.showDetailAlert(title: "Image Creation Error", message: "Unable to create the detail image.")
             }
             
-            self.navigationItem.title = self.recentPhoto.title // Set the title of the view to that of the photo.
+            // Set the title of the view to that of the photo. If the title is blank, leave the title as "Untitled."
+            if self.recentPhoto.title.count != 0 {
+                self.navigationItem.title = self.recentPhoto.title
+            }
         })
     }
     
     // Change the status bar color to white.
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
     
