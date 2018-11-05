@@ -10,8 +10,6 @@ import Foundation
 
 // A series of structs that represent recent photos fetched from the Flickr API that conform to the Codable protocol. This allows for the simplification of JSON parsing and mapping.
 
-// {"photos":{"page":1,"pages":10,"perpage":100,"total":1000},"stat":"ok"}
-
 // Wrapper for the Photos instance.
 struct FlickrPhotos : Codable {
     let photos: Photos

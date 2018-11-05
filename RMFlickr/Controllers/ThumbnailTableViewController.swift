@@ -60,7 +60,7 @@ class ThumbnailTableViewController: UITableViewController {
         let photoDetailViewController = segue.destination as! PhotoDetailViewController
         photoDetailViewController.recentPhoto = recentPhoto
         
-        // Finally, deselect the selected table view cell.
+        // Finally, deselect the selected table view cell with this UITableViewDelegate method.
         tableView.deselectRow(at: selectedIndex!, animated: true)
     }
     
@@ -75,7 +75,6 @@ class ThumbnailTableViewController: UITableViewController {
 
 // Implement the FlickrDelegate protocol.
 extension ThumbnailTableViewController : FlickrDelegate {
-    
     // Handle the recent photos that were fetched from the Flickr API by reloading the table view
     func handleFetchPhotos(fetchedPhotos: [RecentPhoto]) {
         // Switch back to the main thread, set recentPhotos to the new photos, and reload the table view.
@@ -90,17 +89,17 @@ extension ThumbnailTableViewController : FlickrDelegate {
         // Switch back to the main thread and handle the error by showing alert.
         DispatchQueue.main.async(execute: { () -> Void in
             switch error {
-            case FlickrError.ImageCreationError:
+            case FlickrError.imageCreationError:
                 self.showThumbnailAlert(title: "Image Creation Error", message: "Unable to render image")
             default:
                 self.showThumbnailAlert(title: "Error", message: "Unknown error")
             }
             /*
-            case UnableToConnectToServer
-            case NoDataResponse
-            case InvalidJSONData
-            case FlickrAPIError
-            case ImageCreationError*/
+            case unableToConnectToServer
+            case noDataResponse
+            case invalidJSONData
+            case flickrAPIError
+            case imageCreationError*/
         })
     }
 }

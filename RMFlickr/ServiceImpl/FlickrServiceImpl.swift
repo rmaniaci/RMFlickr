@@ -25,6 +25,7 @@ class FlickrServiceImpl: FlickrService {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true // get ready to make API call
         FlickrAPIHandler.shared.fetchPhotosFromFlickrAPI(completion: { (recentPhotos: [RecentPhoto]?, error: FlickrError?) -> Void in // making Flickr API call
             UIApplication.shared.isNetworkActivityIndicatorVisible = false // done making API call
+            
             if error == nil {
                 self.delegate.handleFetchPhotos(fetchedPhotos: recentPhotos!) // go ahead and call the delegate
             } else { // there was an error so it needs to be handled

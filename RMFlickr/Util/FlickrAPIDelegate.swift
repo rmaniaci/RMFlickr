@@ -6,7 +6,7 @@
 //  Copyright © 2018 Ross Maniaci. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 // A delegate that the Flickr API Handler implements.
 protocol FlickrAPIDelegate {

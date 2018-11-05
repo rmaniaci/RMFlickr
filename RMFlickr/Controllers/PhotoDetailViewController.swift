@@ -31,6 +31,11 @@ class PhotoDetailViewController: UIViewController {
         })
     }
     
+    // Change the status bar color to white.
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // Unlike showThumbnailAlert, this alert controller dismisses the photo detail view controller when the OK button is pressed.
     private func showDetailAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
