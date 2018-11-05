@@ -129,6 +129,8 @@
 		32386CF6218CDCA9006E4985 = {
 			isa = PBXGroup;
 			children = (
+				32386D5F218CDFFC006E4985 /* LICENSE.md */,
+				32386D61218CE002006E4985 /* README.md */,
 				32386D01218CDCA9006E4985 /* RMFlickr */,
 				32386D1B218CDCA9006E4985 /* RMFlickrTests */,
 				32386D26218CDCA9006E4985 /* RMFlickrUITests */,
@@ -241,8 +243,6 @@
 				32386D0B218CDCA9006E4985 /* Main.storyboard */,
 				32548F6E218F544B00504D5D /* Assets.xcassets */,
 				32386D13218CDCA9006E4985 /* Info.plist */,
-				32386D5F218CDFFC006E4985 /* LICENSE.md */,
-				32386D61218CE002006E4985 /* README.md */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
