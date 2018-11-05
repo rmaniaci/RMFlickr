@@ -10,9 +10,10 @@ import Foundation
 
 // Enum consisting of self-explanatory errors that occur throughout the app.
 enum FlickrError: Error {
-    case unableToConnectToServer
-    case noDataResponse
-    case invalidJSONData
-    case flickrAPIError
+    case unableToConnectToServerError
+    case invalidApiKeyError
+    case noDataResponseError
+    case invalidJsonDataError
+    case flickrApiError
     case imageCreationError
 }

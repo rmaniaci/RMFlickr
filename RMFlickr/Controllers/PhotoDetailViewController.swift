@@ -23,8 +23,8 @@ class PhotoDetailViewController: UIViewController {
         
         // Set the image.
         photoDetailView.sd_setImage(with: recentPhoto.photoUrl as URL, completed: {(image, error, cacheType, imageURL) in // use the photo url corresponding to the photo that is being displayed in detail
-            if error != nil { // Equvalent of FlickrError.ImageCreationError
-                self.showDetailAlert(title: "Image Creation Error", message: "Unable to create the detail image.")
+            if error != nil {
+                self.errorAlert(error: FlickrError.imageCreationError) // unable to create the detail image
             }
             
             // Set the title of the view to that of the photo. If the title is blank, leave the title as "Untitled."
@@ -37,15 +37,5 @@ class PhotoDetailViewController: UIViewController {
     // Change the status bar color to white.
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
-    }
-    
-    // Unlike showThumbnailAlert, this alert controller dismisses the photo detail view controller when the OK button is pressed.
-    private func showDetailAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
-        alertController.addAction(dismissAction)
-        self.present(alertController, animated: true, completion: {
-            self.navigationController?.popViewController(animated: true)
-        })
     }
 }

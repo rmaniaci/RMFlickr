@@ -34,19 +34,25 @@ class FlickrAPIHandler: FlickrAPIDelegate {
                         }
                         
                         else {
-                            completion(nil, FlickrError.flickrAPIError) // JSON is valid but the API data isn't.
+                            completion(nil, FlickrError.flickrApiError) // JSON is valid but the API data isn't.
                         }
                     } catch { // JSON was unable to be decoded, which means that the JSON was blank or changed.
-                        completion(nil, FlickrError.invalidJSONData)
+                        completion(nil, FlickrError.invalidJsonDataError)
                     }
                 }
                 
                 else {
-                    completion(nil, FlickrError.noDataResponse) // There was no data response.
+                    if response.response?.statusCode == 100 {
+                        completion(nil, FlickrError.invalidApiKeyError)
+                    }
+                    
+                    else {
+                        completion(nil, FlickrError.noDataResponseError) // There was no data response for other reasons.
+                    }
                 }
             case .failure(let error): // Alert user when unable to connect to server.
                 print(error)
-                completion(nil, FlickrError.unableToConnectToServer)
+                completion(nil, FlickrError.unableToConnectToServerError)
             }
         })
     }

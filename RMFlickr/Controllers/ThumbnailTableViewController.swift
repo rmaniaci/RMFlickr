@@ -63,14 +63,6 @@ class ThumbnailTableViewController: UITableViewController {
         // Finally, deselect the selected table view cell with this UITableViewDelegate method.
         tableView.deselectRow(at: selectedIndex!, animated: true)
     }
-    
-    // Alert that handles errors sent from the FlickrService.
-    func showThumbnailAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(dismissAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
 }
 
 // Implement the FlickrDelegate protocol.
@@ -88,18 +80,7 @@ extension ThumbnailTableViewController : FlickrDelegate {
     func handleFetchPhotosError(error: FlickrError) {
         // Switch back to the main thread and handle the error by showing alert.
         DispatchQueue.main.async(execute: { () -> Void in
-            switch error {
-            case FlickrError.imageCreationError:
-                self.showThumbnailAlert(title: "Image Creation Error", message: "Unable to render image")
-            default:
-                self.showThumbnailAlert(title: "Error", message: "Unknown error")
-            }
-            /*
-            case unableToConnectToServer
-            case noDataResponse
-            case invalidJSONData
-            case flickrAPIError
-            case imageCreationError*/
+            self.errorAlert(error: error)
         })
     }
 }

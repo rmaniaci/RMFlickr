@@ -22,9 +22,11 @@ class ThumbnailCell: UITableViewCell {
         
         // Set the image.
         thumbnailView.sd_setImage(with: recentPhoto.photoUrl as URL, completed: {(image, error, cacheType, imageURL) in // use the photo url corresponding to the photo that is being displayed in the thumbnail
-            if error != nil { // Equivalent of FlickrError.ImageCreationError
-                print ("Error")
-                // self.showDetailAlert(title: "Image Creation Error", message: "Unable to create the detail image.")
+            if error != nil {
+                print(error as! String) // unable to create the thumbnail image for this cell.
+                // No alert is displayed here because there could be multiple thumbnail images with errors.
+                // Conversely there could be multiple cells without any errors.
+                // If a user taps on a cell with a thumbnail rendering error, the user will see an alert in detail.
             }
             
             // Set the title of the cell to that of the photo. If the title is blank, set the title as "Untitled."

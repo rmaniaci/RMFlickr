@@ -12,7 +12,7 @@ Cocoapods is used for dependency management. Alamofire is used for HTTP networki
 
 Be sure to open the .xcworkspace rather than the .xcodeproj in order to compile and run the project.
 
-Fill in the APIKey variable with your own API key.
+Fill in the apiKey variable with your own API key.
 
 ## License
 
