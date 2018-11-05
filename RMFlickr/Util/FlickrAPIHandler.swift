@@ -26,7 +26,7 @@ class FlickrAPIHandler: FlickrAPIDelegate {
                         
                         let flickrPhotos = try jsonDecoder.decode(FlickrPhotos.self, from: jsonData) // FlickrPhotos implements the Codable protocol.
                         
-                        // Check the status of the Flickr API.
+                        // Check if the API key is valid.
                         if flickrPhotos.stat == "ok" {
                             // Fetch the recent photos array from flickrPhotos.
                             let recentPhotos = flickrPhotos.photos.photo
@@ -34,21 +34,16 @@ class FlickrAPIHandler: FlickrAPIDelegate {
                         }
                         
                         else {
-                            completion(nil, FlickrError.flickrApiError) // JSON is valid but the API data isn't.
+                            completion(nil, FlickrError.invalidApiKeyError) // The API key is invalid.
                         }
-                    } catch { // JSON was unable to be decoded, which means that the JSON was blank or changed.
+                    } catch let error { // JSON was unable to be decoded, which means that the JSON was blank or changed.
+                        print(error)
                         completion(nil, FlickrError.invalidJsonDataError)
                     }
                 }
                 
                 else {
-                    if response.response?.statusCode == 100 {
-                        completion(nil, FlickrError.invalidApiKeyError)
-                    }
-                    
-                    else {
-                        completion(nil, FlickrError.noDataResponseError) // There was no data response for other reasons.
-                    }
+                    completion(nil, FlickrError.noDataResponseError) // There was no data response for other reasons.
                 }
             case .failure(let error): // Alert user when unable to connect to server.
                 print(error)

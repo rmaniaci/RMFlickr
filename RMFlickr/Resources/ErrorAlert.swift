@@ -16,17 +16,14 @@ extension UIViewController {
         case FlickrError.unableToConnectToServerError:
             self.showAlert(title: "Server Connection Error", message: "Unable to connect to server. Please check if you have an Internet connection", dismiss: false)
         
-        case FlickrError.invalidApiKeyError:
-            self.showAlert(title: "Invalid API Key Error", message: "The API key that is used to connect to the Flickr API is invalid. Please request another one from Flickr.", dismiss: false)
-        
         case FlickrError.noDataResponseError:
             self.showAlert(title: "No Data Response Error", message: "Unable to retrieve data from the server. Please try again later", dismiss: false)
             
         case FlickrError.invalidJsonDataError:
-            self.showAlert(title: "Invalid Data Error", message: "Unable to translate data from the server. This may be because the data is blank or the format has changed", dismiss: false)
+            self.showAlert(title: "Invalid Data Error", message: "Unable to translate data from the server. Data may be blank or in different format.", dismiss: false)
             
-        case FlickrError.flickrApiError:
-            self.showAlert(title: "Flickr Server Error", message: "Unable to retrieve recent photos from Flickr. Please try again later", dismiss: false)
+        case FlickrError.invalidApiKeyError:
+            self.showAlert(title: "Invalid API Key Error", message: "The API key that is used to connect to the Flickr API is invalid. Please request another one from Flickr.", dismiss: false)
         
         case FlickrError.imageCreationError:
             self.showAlert(title: "Image Creation Error", message: "Unable to create the detail image. Returning to thumbnails.", dismiss: true)

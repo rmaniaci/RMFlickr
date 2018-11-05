@@ -13,7 +13,6 @@
 		32386D0A218CDCA9006E4985 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32386D09218CDCA9006E4985 /* PhotoDetailViewController.swift */; };
 		32386D0D218CDCA9006E4985 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32386D0B218CDCA9006E4985 /* Main.storyboard */; };
 		32386D12218CDCA9006E4985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32386D10218CDCA9006E4985 /* LaunchScreen.storyboard */; };
-		32386D1D218CDCA9006E4985 /* RMFlickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32386D1C218CDCA9006E4985 /* RMFlickrTests.swift */; };
 		32386D28218CDCA9006E4985 /* RMFlickrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32386D27218CDCA9006E4985 /* RMFlickrUITests.swift */; };
 		32386D3D218CDD29006E4985 /* FlickrAPIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32386D3C218CDD29006E4985 /* FlickrAPIDelegate.swift */; };
 		32386D3F218CDD35006E4985 /* FlickrAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32386D3E218CDD35006E4985 /* FlickrAPIHandler.swift */; };
@@ -27,6 +26,7 @@
 		32386D6C218CE5AA006E4985 /* FlickrError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32386D6B218CE5AA006E4985 /* FlickrError.swift */; };
 		32386D6E218CF1CF006E4985 /* FlickrConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32386D6D218CF1CF006E4985 /* FlickrConstants.swift */; };
 		3249E3192190B884001667F6 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249E3182190B884001667F6 /* ErrorAlert.swift */; };
+		3249E32D2190F5F2001667F6 /* RMFlickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249E32C2190F5F2001667F6 /* RMFlickrTests.swift */; };
 		32548F6F218F544B00504D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32548F6E218F544B00504D5D /* Assets.xcassets */; };
 		785DD4A4B3D2CD66F336594F /* Pods_RMFlickrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC724363A821349640988AEE /* Pods_RMFlickrUITests.framework */; };
 		924773436389F2905F9B4501 /* Pods_RMFlickr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB6D0E0F5E60468F6919493 /* Pods_RMFlickr.framework */; };
@@ -60,7 +60,6 @@
 		32386D11218CDCA9006E4985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32386D13218CDCA9006E4985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32386D18218CDCA9006E4985 /* RMFlickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMFlickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		32386D1C218CDCA9006E4985 /* RMFlickrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFlickrTests.swift; sourceTree = "<group>"; };
 		32386D1E218CDCA9006E4985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32386D23218CDCA9006E4985 /* RMFlickrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMFlickrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32386D27218CDCA9006E4985 /* RMFlickrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFlickrUITests.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		32386D6B218CE5AA006E4985 /* FlickrError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrError.swift; sourceTree = "<group>"; };
 		32386D6D218CF1CF006E4985 /* FlickrConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrConstants.swift; sourceTree = "<group>"; };
 		3249E3182190B884001667F6 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
+		3249E32C2190F5F2001667F6 /* RMFlickrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFlickrTests.swift; sourceTree = "<group>"; };
 		32548F6E218F544B00504D5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5165D31351923F57CD347356 /* Pods-RMFlickrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMFlickrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RMFlickrUITests/Pods-RMFlickrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C2BEB4D09FDBED504D9AC74 /* Pods-RMFlickr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMFlickr.release.xcconfig"; path = "Pods/Target Support Files/Pods-RMFlickr/Pods-RMFlickr.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		32386D1B218CDCA9006E4985 /* RMFlickrTests */ = {
 			isa = PBXGroup;
 			children = (
-				32386D1C218CDCA9006E4985 /* RMFlickrTests.swift */,
+				3249E32C2190F5F2001667F6 /* RMFlickrTests.swift */,
 				32386D1E218CDCA9006E4985 /* Info.plist */,
 			);
 			path = RMFlickrTests;
@@ -494,7 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32386D1D218CDCA9006E4985 /* RMFlickrTests.swift in Sources */,
+				3249E32D2190F5F2001667F6 /* RMFlickrTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +576,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -637,6 +638,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
